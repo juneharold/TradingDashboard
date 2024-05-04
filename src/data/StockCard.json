@@ -1,0 +1,42 @@
+{
+  "nvidia": {
+    "name": "Nvidia", 
+    "ticker": "NVDA",
+    "image": {
+      "icon": "/nvidia-1.svg",
+      "graph": "/group-3.svg"
+    }
+  },
+  "meta": {
+    "name": "META", 
+    "ticker": "META",
+    "image": {
+      "icon": "/meta1-1.svg",
+      "graph": "/group-3-1.svg"
+    }
+  },
+  "tesla": {
+    "name": "Tesla Inc.", 
+    "ticker": "TSLA",
+    "image": {
+      "icon": "/teslamotors1-1.svg",
+      "graph": "/group-3-2@2x.svg"
+    }
+  },
+  "apple": {
+    "name": "Apple Inc.", 
+    "ticker": "AAPL",
+    "image": {
+      "icon": "/391pxapple-logo-black-1@2x.png",
+      "graph": "/group-3-2@2x.svg"
+    }
+  },
+  "amd": {
+    "name": "Advanced Micro Devices",
+    "ticker": "AMD",
+    "image": {
+      "icon": "amdlogo1-1.svg",
+      "graph": "/group-3-4.svg"
+    }
+  }
+}

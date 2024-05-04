@@ -1,0 +1,47 @@
+.background {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 200%;
+  overflow: hidden;
+  max-height: 200%;
+}
+.inner-box {
+  position: absolute;
+  size: absolute;
+  background-color: var(--color-white);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-darkgray);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 30%;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-51xl);
+}
+.outer-box {
+  width: 100%;
+  position: relative;
+  background-image: url("/rectangle.svg");
+  height: 100%;
+  overflow: hidden;
+  background-image: url('path/to/your-image.jpg'); /* Path to your image */
+  background-size: cover; /* Cover the entire box */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  /* Ensure the outer-box has dimensions if it's not defined by its content */
+  width: 100%; /* Example: make the box full width */
+  height: 500px; /* Example: specify a height */
+}

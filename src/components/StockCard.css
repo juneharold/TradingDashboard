@@ -1,0 +1,106 @@
+.income-expenses {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-paleturquoise);
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-base-5) var(--padding-xs);
+  box-sizing: border-box;
+  gap: var(--gap-base);
+  min-width: 138px;
+}
+
+.monthly-budget {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--padding-11xs);
+  gap: var(--gap-xl);
+}
+.nvidia-1-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  gap: var(--gap-7xs);
+}
+.nvidia-1-icon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.nvidia {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 36px;
+}
+.nvda-parent {
+  width: 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.nvda {
+  width: 34px;
+  min-width: 34px;
+  position: relative;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.am-pm-indicator {
+  position: relative;
+  text-transform: uppercase;
+  display: inline-block;
+  align-self: stretch;
+  color: var(--color-yellowgreen);
+  min-width: 33px;
+}
+.deta-table-row-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  color: var(--color-gray-400);
+}
+.deta-table-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+}
+.current-value,
+.div2 {
+  position: relative;
+  text-transform: capitalize;
+  display: inline-block;
+  min-width: 77px;
+}
+.div2 {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--color-gray-500);
+  min-width: 73px;
+  white-space: nowrap;
+}
+.graph {
+  height: 24px;
+  width: 78px;
+  position: relative;
+}

@@ -1,0 +1,26 @@
+{
+  "dashboard": {
+    "name": "Dashboard"
+  },
+  "watchlist": {
+    "name": "Watchlist"
+  },
+  "transaction": {
+    "name": "Transaction"
+  },
+  "withdrawal": {
+    "name": "Withdrawal"
+  },
+  "portfolio": {
+    "name": "Portfolio"
+  },
+  "alerts": {
+    "name": "Alerts"
+  },
+  "analytics": {
+    "name": "Analytics"
+  },
+  "manage-account": {
+    "name": "Manage Account"
+  }
+}
