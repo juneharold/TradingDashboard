@@ -1,5 +1,5 @@
 import "./Menu.css";
-import SideBarButton from "./SideBarButton";
+import SideBarButton from "./menu/SideBarButton";
 
 const MAIN_MENU_BUTTON_LIST = [
   "dashboard",
@@ -22,19 +22,19 @@ const Menu = () => {
           <div className="main-menu">MAIN MENU</div>
         </div>
         <div className="apps-pages">
-          {MAIN_MENU_BUTTON_LIST.map((buttonName)=>(<SideBarButton buttonName={buttonName}/>))}
+          {MAIN_MENU_BUTTON_LIST.map((buttonName)=>(<SideBarButton key={buttonName} buttonName={buttonName}/>))}
         </div>
         <div className="section1">
           <div className="todo">TODO</div>
         </div>
         <div className="apps-pages1">
-          {TODO_BUTTON_LIST.map((buttonName)=>(<SideBarButton buttonName={buttonName}/>))}
+          {TODO_BUTTON_LIST.map((buttonName)=>(<SideBarButton key={buttonName} buttonName={buttonName}/>))}
         </div>
         <div className="section2">
           <div className="settings">SETTINGS</div>
         </div>
         <div className="components">
-          <SideBarButton buttonName="manage-account"/>
+          <SideBarButton key="manage-account" buttonName="manage-account"/>
         </div>
       </div>
     </div>

@@ -168,10 +168,3 @@ h1 {
   margin-left: 20px;
   margin-top: 15px;
 }
-
-.topleft {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  font-size: 18px;
-}

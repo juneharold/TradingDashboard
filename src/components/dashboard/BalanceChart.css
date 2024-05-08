@@ -1,3 +1,19 @@
+.heading-parent {
+  background-color: var(--light-solid-color-extra-card-background);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) var(--padding-xl);
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-lightslategray);
+  font-family: var(--light-basic-typography-paragraph-small-semi-bold);
+  border-radius: var(--br-7xs);
+  box-shadow: var(--light-gray-gray-sm);
+  box-sizing: border-box;
+}
 .heading,
 .heading1 {
   position: relative;
@@ -351,15 +367,4 @@
   color: var(--text-10);
   font-family: var(--font-poppins);
 }
-.heading-parent {
-  background-color: var(--others-white);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-21xl) var(--padding-11xl);
-  text-align: left;
-  font-size: var(--font-size-lg);
-  color: var(--color-lightslategray);
-  font-family: var(--light-basic-typography-paragraph-small-semi-bold);
-}
+

@@ -1,5 +1,5 @@
-import Inputs from "./Inputs";
-import "./Form.css";
+import Inputs from "./login-page/Inputs";
+import "./LoginPage.css";
 
 export default function Form({type, handleProceed, handleFormPage}) {
   return (

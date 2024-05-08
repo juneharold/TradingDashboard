@@ -1,0 +1,47 @@
+.item-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) var(--padding-base);
+  width: 100%;
+}
+.item-id {
+  font-weight: 600;
+  display: inline-block;
+  width: 25%;
+  flex: 1;
+  position: relative;
+  line-height: 22px;
+}
+.item-ticker {
+  flex: 1;
+  position: relative;
+  line-height: 22px;
+  display: inline-block;
+  width: 25%;
+}
+.item-buy {
+  width: 25%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.buy-text {
+  flex: 1;
+  position: relative;
+  line-height: 22px;
+  font-weight: 500;
+}
+.item-amount {
+  width: 25%;
+  flex: 1;
+  position: relative;
+  line-height: 22px;
+  font-weight: 500;
+  display: inline-block;
+  white-space: nowrap;
+}

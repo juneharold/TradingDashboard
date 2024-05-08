@@ -5,7 +5,7 @@ import { BiMoneyWithdraw } from "react-icons/bi";
 import { HiOutlineCollection } from "react-icons/hi";
 import { LuAlertCircle } from "react-icons/lu";
 
-import sideBarData from "../data/SideBarButton.json";
+import sideBarData from "../../data/SideBarButton.json";
 
 const ICON_MAP = {
   "dashboard": IoHome,

@@ -1,10 +1,8 @@
 import { useState } from "react";
-import Form from "./components/Form";
+import LoginPage from "./components/LoginPage";
 import "./App.css";
 import Dashboard from "./components/Dashboard";
 import Menu from "./components/Menu";
-import PriceContainer from "./components/PriceContainer";
-import PriceSelectionContainer from "./components/PriceSelectionContainer";
 
 export default function App() {
   const [page, changePage] = useState("login");
@@ -25,7 +23,7 @@ export default function App() {
             <img src="/logo.svg" alt="Cinque Terre" width="70" height="70" />
             <h1 style={{ float: "right" }}>Trading Dashboard</h1>
           </div>
-          <Form
+          <LoginPage
             type={page}
             handleProceed={handleToDashboard}
             handleFormPage={handleFormPage}

@@ -1,19 +1,19 @@
-.income-expenses {
-  flex: 1;
+.stock-card {
   border-radius: var(--br-5xs);
   background-color: var(--color-paleturquoise);
-  background-color: blue;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: var(--padding-base-5) var(--padding-xs);
   box-sizing: border-box;
   gap: var(--gap-base);
-  min-width: 138px;
+  width: 200px;
+  height: 100px;
+  margin-right: 1%;
 }
-
-.monthly-budget {
+.upper-div {
+  width: 100%;
   align-self: stretch;
   display: flex;
   flex-direction: row;
@@ -22,7 +22,9 @@
   padding: 0 var(--padding-11xs);
   gap: var(--gap-xl);
 }
-.nvidia-1-parent {
+.company-logo-container {
+  width: 70%;
+  flex: 1;  /* Takes up the remaining space */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -30,20 +32,23 @@
   padding: 0;
   gap: var(--gap-7xs);
 }
-.nvidia-1-icon {
+.company-logo {
   height: 24px;
   width: 24px;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
-.nvidia {
+.company-name {
   position: relative;
   font-weight: 500;
   display: inline-block;
-  min-width: 36px;
+  width: 70%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.nvda-parent {
+.ticker-container {
   width: 33px;
   display: flex;
   flex-direction: column;
@@ -53,15 +58,13 @@
   box-sizing: border-box;
   text-align: right;
 }
-
-.nvda {
-  width: 34px;
-  min-width: 34px;
+.company-ticker {
+  max-width: 34px;
   position: relative;
   text-transform: uppercase;
   display: inline-block;
 }
-.am-pm-indicator {
+.price-change-indicator {
   position: relative;
   text-transform: uppercase;
   display: inline-block;
@@ -69,7 +72,7 @@
   color: var(--color-yellowgreen);
   min-width: 33px;
 }
-.deta-table-row-parent {
+.financial-summary-container {
   align-self: stretch;
   display: flex;
   flex-direction: row;
@@ -78,21 +81,24 @@
   gap: var(--gap-xl);
   color: var(--color-gray-400);
 }
-.deta-table-row {
+.financial-data-row {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gap-9xs);
 }
-.current-value,
-.div2 {
+.current-value {
   position: relative;
   text-transform: capitalize;
   display: inline-block;
   min-width: 77px;
 }
-.div2 {
+.current-price {
+  position: relative;
+  text-transform: capitalize;
+  display: inline-block;
+  min-width: 77px;
   font-size: var(--font-size-lg);
   font-weight: 500;
   color: var(--color-gray-500);

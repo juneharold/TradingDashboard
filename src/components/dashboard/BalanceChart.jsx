@@ -1,6 +1,6 @@
-import "./PriceSelectionContainer.css";
+import "./BalanceChart.css";
 
-const PriceSelectionContainer = () => {
+const BalanceChart = () => {
   return (
     <div className="heading-parent">
       <div className="heading">Your Total Balance</div>
@@ -73,4 +73,4 @@ const PriceSelectionContainer = () => {
   );
 };
 
-export default PriceSelectionContainer;
+export default BalanceChart;
