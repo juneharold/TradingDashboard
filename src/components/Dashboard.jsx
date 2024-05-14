@@ -16,7 +16,7 @@ const Dashboard = () => {
         <TradeHistory />
         <MarketIndices />
       </section>
-      <FrameComponent />
+      {/*<FrameComponent />*/}
     </div>
   );
 };

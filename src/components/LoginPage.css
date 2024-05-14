@@ -1,26 +1,12 @@
-.background {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  max-width: 200%;
-  overflow: hidden;
-  max-height: 200%;
-}
 .inner-box {
   position: absolute;
-  size: absolute;
-  background-color: var(--color-white);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--color-darkgray);
+  background-color: var(--light-solid-color-extra-card-background);
+  border-radius: var(--br-xl);
+  box-shadow: 1px var(--light-gray-gray-sm);
   display: flex;
   flex-direction: column;
   align-self: center;
   width: 30%;
-  height: auto;
   top: 0;
   bottom: 0;
   left: 0;
@@ -31,17 +17,169 @@
   justify-content: center;
   padding: var(--padding-51xl);
 }
-.outer-box {
-  width: 100%;
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-lg);
+  text-align: center;
+  font-size: var(--font-size-smi-8);
+  color: var(--color-gray-300);
+  width: 80%;
+}
+.form-title {
+position: relative;
+font-size: var(--font-size-12xl-3);
+letter-spacing: -0.5px;
+line-height: 37.5px;
+display: inline-block;
+}
+.small-text {
+align-self: stretch;
+position: relative;
+color: var(--color-gray-100);
+}
+
+.frame-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+  text-align: left;
+  font-size: var(--font-size-2xs-3);
+  color: var(--color-dimgray);
+}
+
+.outer-frame {
   position: relative;
-  background-image: url("/rectangle.svg");
-  height: 100%;
+  width: 100%;
+  align-self: flex-start;
+  height: auto;
+}
+
+.inner-frame {
+  display: inline-block;
+  position: relative;
+  height: 33%;
+  width: 100%;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  box-sizing: border-box;
+}
+.text-frame {
+  display: inline-block;
+  position: relative;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  height: 80%;
+}
+.input-type {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  font-weight: bold;
+  font-family: var(--font-zen-kaku-gothic-antique);
+  font-size: var(--font-size-base);
+  background-color: transparent;
+  position: relative;
+  height: 50%;
+  width: 100%;
+  top: -10%;
+  line-height: 28.16px;
+  color: var(--color-gray-100);
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.placeholder-text {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  font-family: var(--font-zen-kaku-gothic-antique);
+  font-size: var(--font-size-base);
+  background-color: transparent;
+  position: relative;
+  height: 62.78%;
+  width: 100%;
+  top: -20%;
+  left: 0;
+  line-height: 28.16px;
+  color: var(--color-gray-100);
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-frame {
   overflow: hidden;
-  background-image: url('path/to/your-image.jpg'); /* Path to your image */
-  background-size: cover; /* Cover the entire box */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  /* Ensure the outer-box has dimensions if it's not defined by its content */
-  width: 100%; /* Example: make the box full width */
-  height: 500px; /* Example: specify a height */
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  gap: var(--gap-5xs);
+  font-size: var(--font-size-2xs-2);
+}
+
+.checkbox {
+margin: 0;
+width: 23px;
+border: 1px solid var(--color-gray-300);
+box-sizing: border-box;
+height: 23px;
+}
+
+.remember-me {
+position: relative;
+text-decoration: underline;
+margin-left: 10px;
+line-height: 22.53px;
+}
+
+.button1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-gray-300);
+  width: 380px;
+  height: 64px;
+  position: relative;
+}
+.proceed-text {
+position: relative;
+font-size: var(--font-size-base);
+line-height: 20px;
+font-weight: 500;
+font-family: var(--font-zen-kaku-gothic-antique);
+color: var(--color-white);
+margin-left: 10%;
+width: 80%;
+text-align: center;
+}
+
+.or {
+position: relative;
+line-height: 20px;
+color: var(--color-black);
+}
+.button2 {
+cursor: pointer;
+border: 0;
+padding: 0;
+background-color: transparent;
+position: relative;
+font-size: var(--font-size-2xs);
+font-family: var(--font-zen-kaku-gothic-antique);
+text-decoration: underline;
+line-height: 10px;
+color: var(--color-midnightblue);
+text-align: right;
+display: inline-block;
+}
+@media screen and (max-width: 1200px) {
+.button1:hover {
+  mix-blend-mode: normal;
+}
 }

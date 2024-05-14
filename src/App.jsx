@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <main>
-      {(page === "login" || page === "signup") && (
+      {(page != "dashboard") && (
         <>
           <div className="topleft">
             <img src="/logo.svg" alt="Cinque Terre" width="70" height="70" />
