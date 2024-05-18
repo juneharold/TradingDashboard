@@ -19,7 +19,7 @@ export default function App() {
     <main>
       {(page != "dashboard") && (
         <>
-          <div className="topleft">
+          <div className="header-box">
             <img src="/logo.svg" alt="Cinque Terre" width="70" height="70" />
             <h1 style={{ float: "right" }}>Trading Dashboard</h1>
           </div>
