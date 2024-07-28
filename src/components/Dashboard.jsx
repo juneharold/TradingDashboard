@@ -1,6 +1,6 @@
 import Navbar from "./dashboard/Navbar";
 import StockOverview from "./dashboard/StockOverview";
-import FrameComponent from "./FrameComponent";
+import PlotlyChart from "./dashboard/PlotlyChart";
 import BalanceChart from "./dashboard/BalanceChart";
 import TradeHistory from "./dashboard/TradeHistory";
 import MarketIndices from "./dashboard/MarketIndices";
@@ -11,7 +11,7 @@ const Dashboard = () => {
     <div className="dashboard">
       <Navbar />
       <StockOverview />
-      <BalanceChart />
+      <PlotlyChart />
       <section className="panel-container">
         <TradeHistory />
         <MarketIndices />

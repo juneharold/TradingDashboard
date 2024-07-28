@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Inputs from "./login-page/Inputs";
 import "./LoginPage.css";
 
-export default function LoginPage({ type, handleProceed, handleFormPage }) {
+export default function LoginPage({ type, handleProceed, changeLoginPage }) {
   const [formData, setFormData] = useState({
-    name: "",
+    firstname: "",
+    lastname: "",
     email: "",
     password: "",
   });
@@ -55,7 +56,6 @@ export default function LoginPage({ type, handleProceed, handleFormPage }) {
       } else {
         setEmailError("");
       }
-
       if (!isPasswordStrong) {
         setPasswordError(
           "Password must be at least 8 characters long, include uppercase and lowercase letters, a number, and a special character."
@@ -70,17 +70,22 @@ export default function LoginPage({ type, handleProceed, handleFormPage }) {
     <div className="inner-box">
       <div className="form-box">
         <b className="form-title">
-          {type === "login" ? "Log in" : "Sign up"} to FBA Quant
+          {type === "login" ? "Log in" : "Sign up"} to AlgoAligator
         </b>
         <div className="small-text">{`Quick & Simple way to Automate your investment`}</div>
         <div className="frame-group">
           <div className="outer-frame">
             {type === "signup" && (
-              <Inputs
-                type="name"
-                inputValue={formData.name}
+              <><Inputs
+                type="firstname"
+                inputValue={formData.firstname}
                 handleChange={handleChange}
               />
+              <Inputs
+                type="lastname"
+                inputValue={formData.lastname}
+                handleChange={handleChange}
+              /></>
             )}
             <Inputs
               type="email"
@@ -103,9 +108,8 @@ export default function LoginPage({ type, handleProceed, handleFormPage }) {
             <div className="proceed-text">PROCEED</div>
           </button>
         </div>
-        <div className="or">OR</div>
-        <button className="button2" onClick={handleFormPage}>
-          No account yet? Register now
+        <button className="button2" onClick={changeLoginPage}>
+          {type === "signup" ? "Already have an account? Log in here." : "No account yet? Sign up now"}
         </button>
       </div>
     </div>

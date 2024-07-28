@@ -57,7 +57,7 @@ def authenticate_user(email: str, password: str, db):
 
 def create_access_token(email: str, user_id: int, role: str, expires_delta: timedelta):
     encode = {'sub': email, 'id': user_id, 'role': role}
-    expires = datetime.time() + expires_delta
+    expires = datetime.now() + expires_delta
     encode.update({'exp': expires})
     return jwt.encode(encode, SECRET_KEY, algorithm=ALGORITHM)
 
@@ -96,7 +96,7 @@ async def create_user(db: db_dependency,
 @router.post("/token", response_model=Token)
 async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
                                  db: db_dependency):
-    user = authenticate_user(form_data.email, form_data.password, db)
+    user = authenticate_user(form_data.username, form_data.password, db)
     if not user:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail='Could not validate user.')

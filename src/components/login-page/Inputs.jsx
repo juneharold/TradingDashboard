@@ -2,13 +2,17 @@ import React from "react";
 import "./Inputs.css";
 
 const INPUTFIELDS = {
+  firstname: {
+    title: "First Name",
+    placeholder: "John",
+  },
+  lastname: {
+    title: "Last Name",
+    placeholder: "Doe",
+  },
   email: {
     title: "Email Address",
     placeholder: "johndoe@mail.com",
-  },
-  name: {
-    title: "Full Name",
-    placeholder: "John Doe",
   },
   password: {
     title: "Password",
