@@ -6,7 +6,7 @@ import Menu from "./components/Menu";
 
 export default function App() {
   const [page, changePage] = useState("login");
-  function handleFormPage() {
+  function changeLoginPage() {
     if (page === "signup") changePage("login");
     else changePage("signup");
     console.log(page);
@@ -21,12 +21,12 @@ export default function App() {
         <>
           <div className="header-box">
             <img src="/algoaligator.png" alt="Cinque Terre" width="70" height="70" />
-            <h1 style={{ float: "right" }}>Trading Dashboard</h1>
+            <h1 style={{ float: "right" }}>AlgoAligator</h1>
           </div>
           <LoginPage
             type={page}
             handleProceed={handleToDashboard}
-            handleFormPage={handleFormPage}
+            changeLoginPage={changeLoginPage}
           />
         </>
       )}
