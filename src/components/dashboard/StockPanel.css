@@ -1,0 +1,93 @@
+.outer-box {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-family: var(--light-basic-typography-paragraph-medium);
+  width: 100%;
+  height: auto;
+  background-color: var(--light-solid-color-extra-card-background);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-3xs);
+  font-size: var(--font-size-lg);
+  color: var(--color-black);
+  border-radius: var(--br-7xs);
+  box-shadow: var(--light-gray-gray-sm);
+}
+
+.stock-panel {
+  align-self: flex-start;
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  min-width: 80px;
+}
+
+.inner-box-container {
+  display: flex;
+  max-width: 100%;
+  text-align: left;
+  font-family: var(--light-basic-typography-paragraph-medium);
+  margin: 0;
+  width: 95%;
+  flex-direction: row;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+.inner-box-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+  margin-right: 2%;
+  height: max-content;
+}
+
+.inner-box-right {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: auto;
+  margin-left: 2%;
+}
+
+.top-box {
+  display: flex;
+  flex-direction: row;
+  max-height: 50px;
+}
+
+.company-logo2 {
+  height: 100%;
+  width: fit-content;
+  box-shadow: 2px 2px 3px rgba(114, 105, 105, 0.5);
+  border: 2px;
+  margin-right: 2%;
+}
+
+.company-name {
+  font-size: larger;
+}
+
+.middle-box {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  height: auto;
+  margin: 1% 0;
+}
+
+.bottom-box {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}

@@ -22,5 +22,8 @@
   },
   "manage-account": {
     "name": "Manage Account"
+  },
+  "log-out": {
+    "name": "Log Out"
   }
 }

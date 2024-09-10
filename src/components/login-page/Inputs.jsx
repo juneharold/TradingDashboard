@@ -2,11 +2,11 @@ import React from "react";
 import "./Inputs.css";
 
 const INPUTFIELDS = {
-  firstname: {
+  first_name: {
     title: "First Name",
     placeholder: "John",
   },
-  lastname: {
+  last_name: {
     title: "Last Name",
     placeholder: "Doe",
   },

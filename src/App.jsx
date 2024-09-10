@@ -2,7 +2,8 @@ import { useState } from "react";
 import LoginPage from "./components/LoginPage";
 import "./App.css";
 import Dashboard from "./components/Dashboard";
-import Menu from "./components/Menu";
+import Menu from "./components/Sidebar";
+import '@fontsource/inter';
 
 export default function App() {
   const [page, changePage] = useState("login");

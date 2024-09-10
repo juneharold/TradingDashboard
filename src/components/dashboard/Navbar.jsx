@@ -1,6 +1,8 @@
-import "./Navbar.css";
+import './Navbar.css';
+import useAuth from '../useAuth';
 
 const Navbar = () => {
+  const { user, loading } = useAuth();
   return (
     <div className="navbar-container">
       <div className="navbar">
@@ -11,7 +13,7 @@ const Navbar = () => {
               <div className="user" />
               <img className="user-icon" alt="" src="/user@2x.png" />
             </div>
-            <div className="john-doe">John Doe</div>
+            <div className="john-doe">{loading ? 'Loading...' : user ? `${user.first_name} ${user.last_name}` : 'Not logged in'}</div>
           </div>
         </div>
       </div>

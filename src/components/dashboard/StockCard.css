@@ -30,15 +30,14 @@
   padding: 0;
   gap: var(--gap-7xs);
 }
-.company-logo {
+.company-logo1 {
   height: 24px;
   width: 24px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  margin-left: -5px;
   position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
 }
-.company-name {
+.company-name1 {
   position: relative;
   font-weight: 500;
   display: inline-block;
@@ -93,12 +92,10 @@
 }
 .current-price {
   position: relative;
-  text-transform: capitalize;
   display: inline-block;
-  min-width: 77px;
+  color: black;
   font-size: var(--font-size-lg);
   font-weight: 500;
-  color: var(--color-gray-500);
   min-width: 73px;
   white-space: nowrap;
 }

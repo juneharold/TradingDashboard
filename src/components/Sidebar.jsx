@@ -1,5 +1,5 @@
-import "./Menu.css";
-import SideBarButton from "./menu/SideBarButton";
+import "./Sidebar.css";
+import SideBarButton from "./sidebar/SideBarButton";
 
 const MAIN_MENU_BUTTON_LIST = [
   "dashboard",
@@ -35,6 +35,7 @@ const Menu = () => {
         </div>
         <div className="components">
           <SideBarButton key="manage-account" buttonName="manage-account"/>
+          <SideBarButton key="log-out" buttonName="log-out" handleClick={() => localStorage.removeItem('token')}/>
         </div>
       </div>
     </div>
