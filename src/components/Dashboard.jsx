@@ -1,7 +1,7 @@
 import Navbar from "./dashboard/Navbar";
 import StockOverview from "./dashboard/StockOverview";
 import BalanceChart from "./dashboard/BalanceChart";
-import TradeHistory from "./dashboard/TradeHistory";
+import MyPortfolio from "./dashboard/MyPortfolio";
 import MarketIndices from "./dashboard/MarketIndices";
 import StockPanel from "./dashboard/StockPanel";
 import "./Dashboard.css";
@@ -13,7 +13,7 @@ const Dashboard = () => {
       <StockOverview />
       <StockPanel />
       <section className="panel-container">
-        <TradeHistory />
+        <MyPortfolio />
         <MarketIndices />
       </section>
       {/*<FrameComponent />*/}

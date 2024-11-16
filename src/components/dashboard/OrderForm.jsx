@@ -4,7 +4,7 @@ import FormLabel from "@mui/joy/FormLabel";
 import Autocomplete from "@mui/joy/Autocomplete";
 import CircularProgress from "@mui/joy/CircularProgress";
 
-const API_KEY = "a9f21eab275bad66a23aadba66f3b626"; // Replace with your actual API key
+const FMP_API_KEY = import.meta.env.VITE_FMP; 
 
 export default function OrderForm({changeSymbol}) {
   const [open, setOpen] = React.useState(false);
@@ -24,7 +24,7 @@ export default function OrderForm({changeSymbol}) {
         return;
       }
       try {
-        const response = await fetch(`https://financialmodelingprep.com/api/v3/search?query=${inputValue}&limit=10&apikey=${API_KEY}`);
+        const response = await fetch(`https://financialmodelingprep.com/api/v3/search?query=${inputValue}&limit=10&apikey=${FMP_API_KEY}`);
         const data = await response.json();
         if (active) setOptions(data);
         setLoading(false);

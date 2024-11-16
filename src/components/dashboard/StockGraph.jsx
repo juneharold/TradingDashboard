@@ -4,6 +4,8 @@ import { LineChart, lineElementClasses, markElementClasses } from '@mui/x-charts
 import Box from '@mui/material/Box';
 import { SparkLineChart } from '@mui/x-charts/SparkLineChart';
 
+const FMP_API_KEY = import.meta.env.VITE_FMP; 
+
 export default function StockGraph({ symbol, timeRange, graphType }) {
   const [stockData, setStockData] = React.useState();
   const [loading, setLoading] = React.useState(true);
@@ -45,7 +47,7 @@ export default function StockGraph({ symbol, timeRange, graphType }) {
           const response = await axios.get(
             `https://financialmodelingprep.com/api/v3/historical-chart/${timeFrame}/${symbol}?from=${formatDate(from)}&to=${formatDate(
               to,
-            )}&apikey=a9f21eab275bad66a23aadba66f3b626`,
+            )}&apikey=${FMP_API_KEY}`,
           );
           const validatedData = response.data.filter(item => item.date && !isNaN(item.close));
           setStockData(validatedData);
@@ -61,7 +63,7 @@ export default function StockGraph({ symbol, timeRange, graphType }) {
           const response = await axios.get(
             `https://financialmodelingprep.com/api/v3/historical-price-full/${symbol}?from=${formatDate(from)}&to=${formatDate(
               to,
-            )}&apikey=a9f21eab275bad66a23aadba66f3b626`,
+            )}&apikey=${FMP_API_KEY}`,
           );
           const validatedData = response.data.historical.filter(item => item.date && !isNaN(item.close));
           setStockData(validatedData);

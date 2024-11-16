@@ -1,19 +1,30 @@
 import React, { useState, useEffect } from "react";
 import StockGraph from "./StockGraph";
 import axios from 'axios';
-import companyData from "../../data/StockCard.json";
 import "./StockCard.css";
+
+const FMP_API_KEY = import.meta.env.VITE_FMP; 
 
 export default function StockCard({ ticker }) {
   const [stockData, setStockData] = useState(null);
+  const [websiteLink, setWebsiteLink] = useState(null); // websiteLink should be something like "apple.com" to search images
 
   useEffect(() => {
     const fetchStockData = async () => {
       try {
-        const response = await axios.get(`https://financialmodelingprep.com/api/v3/quote/${ticker}?apikey=a9f21eab275bad66a23aadba66f3b626`);
-        if (response.data && response.data.length > 0) {
-          setStockData(response.data[0]);
-          console.log(response.data[0]);
+        const response1 = await axios.get(`https://financialmodelingprep.com/api/v3/quote/${ticker}?apikey=${FMP_API_KEY}`);
+        if (response1.data && response1.data.length > 0) {
+          setStockData(response1.data[0]);
+        }
+        const response2 = await axios.get(`https://financialmodelingprep.com/api/v3/profile/${ticker}?apikey=${FMP_API_KEY}`);
+        if (response2.data && response2.data.length > 0) {
+          const url = new URL(response2.data[0].website);
+          let domain = url.hostname;
+          // Remove 'www.' if it exists
+          if (domain.startsWith('www.')) {
+            domain = domain.replace('www.', '');
+          }
+          setWebsiteLink(domain);
         }
       } catch (error) {
         console.error("Error fetching stock data:", error);
@@ -34,7 +45,7 @@ export default function StockCard({ ticker }) {
             className="company-logo1"
             loading="lazy"
             alt=""
-            src={`https://img.logo.dev/apple.com?token=pk_dE_jx5XMS--t-pwbDnUpYA`}
+            src={`https://img.logo.dev/${websiteLink}?token=pk_dE_jx5XMS--t-pwbDnUpYA`}
           />
           <div className="company-name1">{stockData ? stockData.name : "-"}</div>
         </div>

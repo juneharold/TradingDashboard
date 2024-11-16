@@ -12,6 +12,12 @@ from urllib.request import urlopen
 import certifi
 import json
 import logging
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+fmp_api_key = os.getenv("FMP")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -37,9 +43,8 @@ def get_stock_price(ticker: str) -> float:
     """
     returns stock price of (argument) ticker. Used to calculate current portfolio value of user. 
     """
-    response = urlopen(f"https://financialmodelingprep.com/api/v3/quote-order/{ticker}?apikey=a9f21eab275bad66a23aadba66f3b626", cafile=certifi.where())
+    response = urlopen(f"https://financialmodelingprep.com/api/v3/quote-order/{ticker}?apikey={fmp_api_key}", cafile=certifi.where())
     data = response.read().decode("utf-8")
-    logger.info(data)
     return float(json.loads(data)[0]["price"])
 
 

@@ -2,16 +2,16 @@ import "./Sidebar.css";
 import SideBarButton from "./sidebar/SideBarButton";
 
 const MAIN_MENU_BUTTON_LIST = [
-  "dashboard",
-  "watchlist",
-  "transaction",
-  "withdrawal",
+  "Dashboard",
+  "Watchlist",
+  "Transaction",
+  "Withdrawal",
 ];
 
 const TODO_BUTTON_LIST = [
-  "portfolio",
-  "alerts",
-  "analytics"
+  "Portfolio",
+  "Alerts",
+  "Analytics"
 ];
 
 const Menu = () => {
@@ -34,8 +34,8 @@ const Menu = () => {
           <div className="settings">SETTINGS</div>
         </div>
         <div className="components">
-          <SideBarButton key="manage-account" buttonName="manage-account"/>
-          <SideBarButton key="log-out" buttonName="log-out" handleClick={() => localStorage.removeItem('token')}/>
+          <SideBarButton key="Manage Account" buttonName="Manage Account"/>
+          <SideBarButton key="Log Out" buttonName="Log Out" handleClick={() => localStorage.removeItem('token')}/>
         </div>
       </div>
     </div>

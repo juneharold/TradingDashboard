@@ -19,6 +19,8 @@ import Sheet from '@mui/joy/Sheet';
 import Stack from '@mui/joy/Stack';
 import { styled } from '@mui/joy/styles';
 
+const FMP_API_KEY = import.meta.env.VITE_FMP; 
+
 const Item = styled(Sheet)(({ theme }) => ({
   ...theme.typography['body-sm'],
   textAlign: 'center',
@@ -45,8 +47,8 @@ const StockPanel = () => {
     const fetchStockData = async () => {
       if (symbol) {
         try {
-          const response = await axios.get(`https://financialmodelingprep.com/api/v3/quote/${symbol}?apikey=a9f21eab275bad66a23aadba66f3b626`);
-          const companyInfo = await axios.get(`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=a9f21eab275bad66a23aadba66f3b626`);
+          const response = await axios.get(`https://financialmodelingprep.com/api/v3/quote/${symbol}?apikey=${FMP_API_KEY}`);
+          const companyInfo = await axios.get(`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=${FMP_API_KEY}`);
           if (response.data && response.data.length > 0) {
             setStockInfo(response.data[0]);
             if (companyInfo.data[0]!=null) setCompanyWebsiteLink(companyInfo.data[0].website.slice(12));
