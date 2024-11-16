@@ -1,8 +1,11 @@
-# React + Vite
+# Trading Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+• Developed a scalable backend system using FastAPI to handle simultaneous API requests, managing user
+authentication with OAuth2 and JWT, retrieving real-time stock data, and displaying historical trade records.
+• Implemented secure data storage solutions with PostgreSQL, optimizing query performance through database
+indexing and efficient schema design.
+• Integrated third-party stock market APIs to fetch live stock data, ensuring data synchronization and handling API
+rate limits.
+• Used React to develop visually-stunning frontend components that display real-time stock prices, graphs etc.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Trading Dashboard Image](./Dashboard_Image.png "Trading Dashboard Image")
